@@ -1,10 +1,11 @@
 App\Entity\TvSeries:
+    attributes:
     itemOperations:
         get: ~
         put: ~
         delete: ~
         rate:
-            input: App\Dto\Rating
+            input: App\Query\Rating
             method: 'PUT'
             path: 'tv_series/{id}/rate.{_format}'
     properties:

@@ -19,8 +19,9 @@ class ProjectsTest extends ApiTestCase
      */
     public function testGetSeries()
     {
-        // $config = new Profile\Configuration();
-        // $config->assert('metrics.sql.queries.count < 5', 'SQL queries');
+        $client = static::createClient();
+        $config = new Profile\Configuration();
+        $config->assert('metrics.sql.queries.count < 1', 'SQL queries');
 //         $this->expectException(ClientExceptionInterface::class);
 //         $this->expectExceptionCode(400); // HTTP status code
 //         $this->expectExceptionMessage(<<<ERROR
@@ -29,8 +30,9 @@ class ProjectsTest extends ApiTestCase
 // ERROR
 // );
 
-        $client = static::createClient();
-        $response = $client->request('GET', '/api/tv_series');
-        dump($response->getContent());
+        $profile = $this->assertBlackfire($config, function () use ($client) {
+            $response = $client->request('GET', '/api/tv_series');
+            dump($response->getContent());
+        });
     }
 }

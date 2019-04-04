@@ -4,7 +4,8 @@ App\Entity\Episode:
         put: ~
         delete: ~
         rate:
-            input: App\Dto\Rating
+            messenger: 'input'
+            input: App\Query\Rating
             method: 'PUT'
             path: 'episodes/{id}/rate.{_format}'
 

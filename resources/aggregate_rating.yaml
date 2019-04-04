@@ -1,3 +1,4 @@
+# TODO: fix blank iri
 App\Entity\AggregateRating:
     itemOperations: ['get']
     collectionOperations: ['get']

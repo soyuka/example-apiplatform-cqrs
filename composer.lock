@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71bef798eefbbc24dc03a94551403c82",
+    "content-hash": "b239ed3386ae1093f0182b6eed18f497",
     "packages": [
         {
             "name": "api-platform/api-pack",
@@ -48,7 +48,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:soyuka/core",
-                "reference": "e5225b3a344732c2febbf18106445878c8bb4862"
+                "reference": "1327e00559ff719a8f8a841c174e8149596185d4"
             },
             "require": {
                 "doctrine/inflector": "^1.0",
@@ -59,7 +59,7 @@
                 "symfony/http-kernel": "^3.4 || ^4.0",
                 "symfony/property-access": "^3.4 || ^4.0",
                 "symfony/property-info": "^3.4 || ^4.0",
-                "symfony/serializer": "^4.1",
+                "symfony/serializer": "^4.2",
                 "symfony/web-link": "^4.1",
                 "willdurand/negotiation": "^2.0.3"
             },
@@ -81,15 +81,19 @@
                 "doctrine/mongodb-odm-bundle": "^4.0.0@beta",
                 "doctrine/orm": "^2.6.3",
                 "elasticsearch/elasticsearch": "^6.0",
-                "friendsofsymfony/user-bundle": "dev-fix-mongodb-mapping",
+                "friendsofsymfony/user-bundle": "^2.2@dev",
                 "guzzlehttp/guzzle": "^6.0",
+                "jangregor/phpstan-prophecy": "^0.3",
                 "justinrainbow/json-schema": "^5.0",
                 "nelmio/api-doc-bundle": "^2.13.3",
-                "php-mock/php-mock-phpunit": "^2.0",
                 "phpdocumentor/reflection-docblock": "^3.0 || ^4.0",
                 "phpdocumentor/type-resolver": "^0.3 || ^0.4",
                 "phpspec/prophecy": "^1.8",
-                "phpunit/phpunit": "^7.5.4",
+                "phpstan/phpstan": "^0.11.3",
+                "phpstan/phpstan-doctrine": "^0.11.2",
+                "phpstan/phpstan-phpunit": "^0.11",
+                "phpstan/phpstan-symfony": "^0.11.2",
+                "phpunit/phpunit": "^7.5.2",
                 "psr/log": "^1.0",
                 "ramsey/uuid": "^3.7",
                 "ramsey/uuid-doctrine": "^1.4",
@@ -176,7 +180,7 @@
                 "REST",
                 "Swagger"
             ],
-            "time": "2019-03-29T18:14:43+00:00"
+            "time": "2019-04-04T13:19:28+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -489,12 +493,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "546cd67495de87a7406cbdb4580730068c696cab"
+                "reference": "799085fac21c9759c1fcef828586418723ad063f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/546cd67495de87a7406cbdb4580730068c696cab",
-                "reference": "546cd67495de87a7406cbdb4580730068c696cab",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/799085fac21c9759c1fcef828586418723ad063f",
+                "reference": "799085fac21c9759c1fcef828586418723ad063f",
                 "shasum": ""
             },
             "require": {
@@ -520,7 +524,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.9.x-dev",
+                    "dev-master": "2.10.x-dev",
                     "dev-develop": "3.0.x-dev"
                 }
             },
@@ -563,7 +567,7 @@
                 "php",
                 "queryobject"
             ],
-            "time": "2019-03-17T22:29:55+00:00"
+            "time": "2019-04-04T02:02:38+00:00"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -571,12 +575,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "4f0f2d1748c98799124b11f147b24e5583bf6e7e"
+                "reference": "d2957560bc55959889105aba820810cf41706b74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/4f0f2d1748c98799124b11f147b24e5583bf6e7e",
-                "reference": "4f0f2d1748c98799124b11f147b24e5583bf6e7e",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/d2957560bc55959889105aba820810cf41706b74",
+                "reference": "d2957560bc55959889105aba820810cf41706b74",
                 "shasum": ""
             },
             "require": {
@@ -651,7 +655,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2019-04-02T06:50:30+00:00"
+            "time": "2019-04-04T12:48:50+00:00"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -2635,12 +2639,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "3427489c3ff590a18775a0a667e4f122a4f1ef66"
+                "reference": "305a6cd75a54992f47f46eb655245b6c9a06997a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/3427489c3ff590a18775a0a667e4f122a4f1ef66",
-                "reference": "3427489c3ff590a18775a0a667e4f122a4f1ef66",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/305a6cd75a54992f47f46eb655245b6c9a06997a",
+                "reference": "305a6cd75a54992f47f46eb655245b6c9a06997a",
                 "shasum": ""
             },
             "require": {
@@ -2676,7 +2680,7 @@
                 }
             ],
             "description": "Composer plugin for Symfony",
-            "time": "2019-03-09T19:31:33+00:00"
+            "time": "2019-04-03T17:16:03+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -3058,6 +3062,70 @@
                 "words"
             ],
             "time": "2019-01-16T20:31:39+00:00"
+        },
+        {
+            "name": "symfony/messenger",
+            "version": "4.2.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/messenger.git",
+                "reference": "a84da6594ea9935a06546fb0e3ff6607b70b2932"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/messenger/zipball/a84da6594ea9935a06546fb0e3ff6607b70b2932",
+                "reference": "a84da6594ea9935a06546fb0e3ff6607b70b2932",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/console": "~3.4|~4.0",
+                "symfony/dependency-injection": "~3.4.19|^4.1.8",
+                "symfony/http-kernel": "~3.4|~4.0",
+                "symfony/process": "~3.4|~4.0",
+                "symfony/property-access": "~3.4|~4.0",
+                "symfony/serializer": "~3.4|~4.0",
+                "symfony/stopwatch": "~3.4|~4.0",
+                "symfony/validator": "~3.4|~4.0",
+                "symfony/var-dumper": "~3.4|~4.0"
+            },
+            "suggest": {
+                "enqueue/messenger-adapter": "For using the php-enqueue library as a transport."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Messenger\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                },
+                {
+                    "name": "Samuel Roze",
+                    "email": "samuel.roze@gmail.com"
+                }
+            ],
+            "description": "Symfony Messenger Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-03-12T17:23:22+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -4490,7 +4558,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:soyuka/schema-generator",
-                "reference": "1ef67cd631b7e84fe6b5bbe41d74b770c581980e"
+                "reference": "3ee56178c48638bc3591b1ab93226ad94388de8f"
             },
             "require": {
                 "doctrine/inflector": "^1.0",
@@ -4551,7 +4619,7 @@
                 "semantic",
                 "symfony"
             ],
-            "time": "2019-04-03T15:21:14+00:00"
+            "time": "2019-04-03T16:00:04+00:00"
         },
         {
             "name": "blackfire/php-sdk",

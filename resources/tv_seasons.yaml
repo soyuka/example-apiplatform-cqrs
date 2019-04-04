@@ -4,7 +4,7 @@ App\Entity\TvSeason:
         put: ~
         delete: ~
         rate:
-            input: App\Dto\Rating
+            input: App\Query\Rating
             method: 'PUT'
             path: 'tv_seasons/{id}/rate.{_format}'
     properties:
