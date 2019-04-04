@@ -1,13 +1,14 @@
 App\Entity\TvSeries:
-    attributes:
     itemOperations:
         get: ~
         put: ~
         delete: ~
         rate:
+            messenger: 'input'
             input: App\Query\Rating
             method: 'PUT'
             path: 'tv_series/{id}/rate.{_format}'
+
     properties:
         aggregateRating:
             writable: false

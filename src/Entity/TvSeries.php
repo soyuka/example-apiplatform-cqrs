@@ -9,7 +9,6 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -37,7 +36,6 @@ class TvSeries
      * @ORM\Column(type="text")
      * @ApiProperty(iri="http://schema.org/headline")
      * @Assert\NotNull
-     * @Groups({"read"})
      */
     private $headline;
 
@@ -47,7 +45,6 @@ class TvSeries
      * @ORM\Column(type="text", nullable=true)
      * @ApiProperty(iri="http://schema.org/license")
      * @Assert\Url
-     * @Groups({"read"})
      */
     private $license;
 
@@ -56,7 +53,6 @@ class TvSeries
      *
      * @ORM\OneToOne(targetEntity="App\Entity\AggregateRating")
      * @ApiProperty(iri="http://schema.org/aggregateRating")
-     * @Groups({"read"})
      */
     private $aggregateRating;
 
@@ -66,7 +62,6 @@ class TvSeries
      * @ORM\Column(type="integer")
      * @ApiProperty(iri="http://schema.org/numberOfEpisodes")
      * @Assert\NotNull
-     * @Groups({"read"})
      */
     private $numberOfEpisode;
 
@@ -76,7 +71,6 @@ class TvSeries
      * @ORM\Column(type="integer")
      * @ApiProperty(iri="http://schema.org/numberOfSeasons")
      * @Assert\NotNull
-     * @Groups({"read"})
      */
     private $numberOfSeason;
 
@@ -86,7 +80,6 @@ class TvSeries
      * @ORM\OneToMany(targetEntity="App\Entity\TvSeason", mappedBy="partOfSeries")
      * @ORM\JoinTable(inverseJoinColumns={@ORM\JoinColumn(unique=true)})
      * @ApiProperty(iri="http://schema.org/seasons")
-     * @Groups({"read"})
      */
     private $seasons;
 
@@ -96,7 +89,6 @@ class TvSeries
      * @ORM\OneToMany(targetEntity="App\Entity\Episode", mappedBy="partOfSeries")
      * @ORM\JoinTable(inverseJoinColumns={@ORM\JoinColumn(unique=true)})
      * @ApiProperty(iri="http://schema.org/episodes")
-     * @Groups({"read"})
      */
     private $episodes;
 
