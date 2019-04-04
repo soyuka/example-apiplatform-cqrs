@@ -1,0 +1,14 @@
+App\Entity\Episode:
+    itemOperations:
+        get: ~
+        put: ~
+        delete: ~
+        rate:
+            input: App\Dto\Rating
+            method: 'PUT'
+            path: 'episodes/{id}/rate.{_format}'
+
+    properties:
+        aggregateRating:
+            writable: false
+            readableLink: true

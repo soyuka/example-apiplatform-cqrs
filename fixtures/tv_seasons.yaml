@@ -1,0 +1,7 @@
+App\Entity\TVSeason:
+    tv_seasons_{1..10}:
+        headline: <name()>
+        license: <url()>
+        numberOfEpisode: <randomDigit()>
+        seasonNumber: <randomDigit()>
+        partOfSeries: '@tv_series_<current()>'

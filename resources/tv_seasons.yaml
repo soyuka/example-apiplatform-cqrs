@@ -1,0 +1,13 @@
+App\Entity\TvSeason:
+    itemOperations:
+        get: ~
+        put: ~
+        delete: ~
+        rate:
+            input: App\Dto\Rating
+            method: 'PUT'
+            path: 'tv_seasons/{id}/rate.{_format}'
+    properties:
+        aggregateRating:
+            writable: false
+            readableLink: true

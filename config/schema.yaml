@@ -1,0 +1,34 @@
+types:
+    AggregateRating:
+        properties:
+            ratingCount: { nullable: false }
+            reviewCount: { nullable: false }
+
+    TVSeries:
+        properties:
+            headline: { nullable: false }
+            license: { range: "URL" }
+            aggregateRating: ~
+            numberOfEpisodes: { nullable: false }
+            numberOfSeasons: { nullable: false }
+            seasons: { range: "TVSeason", cardinality: "(0..*)", mappedBy: 'partOfSeries' }
+            episodes: { range: "Episode", cardinality: "(0..*)", mappedBy: 'partOfSeries' }
+
+    TVSeason:
+        properties:
+            headline: { nullable: false }
+            license: { range: "URL" }
+            aggregateRating: ~
+            numberOfEpisodes: { range: "Integer", nullable: false }
+            seasonNumber: { range: "Integer", nullable: false }
+            partOfSeries: { range: "TVSeries", cardinality: "(*..1)", inversedBy: 'seasons' }
+            episodes: { range: "Episode", cardinality: "(0..*)", mappedBy: 'partOfSeason' }
+
+    Episode:
+        properties:
+            headline: { nullable: false }
+            episodeNumber: { range: "Integer", nullable: false }
+            license: { range: "URL" }
+            aggregateRating: ~
+            partOfSeason: { range: "TVSeason", cardinality: "(*..1)", inversedBy: 'episodes' }
+            partOfSeries: { range: "TVSeries", cardinality: "(*..1)", inversedBy: 'episodes' }
